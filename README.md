@@ -8,7 +8,7 @@ Bellow is a example how it runs.
 
 ![Example](https://otglot.weebly.com/uploads/4/4/8/2/44824789/screenshot-2024-03-09-at-9-12-55-pm_orig.png)
 
-**How to Run:**
+**How to Run:** <br>
 1. Download the .sh file.
 2. Save it in your desired location.
 3. Open the Terminal app.
@@ -16,3 +16,10 @@ Bellow is a example how it runs.
 5. Type the command chmod +x DockLock.sh (you only need to do this once)
 6. Type the command ./DockLock.sh to run the script.
 7. Done. Repeat steps 3, 4 and 6 if you want to open the Script again. 
+
+**Features:** <br>
+1 - Turn Dock Lock On: Locks the macOS Dock to prevent resizing. <br>
+2 - Turn Dock Lock Off: Unlocks the macOS Dock, allowing resizing. <br>
+3 - Check Dock Lock Status: Displays whether the Dock is currently locked or unlocked. <br>
+4 - Clear Terminal: Clears the terminal screen for better visibility. <br>
+0 - Exit: Exits the DockLock program. <br>
