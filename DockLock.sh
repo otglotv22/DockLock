@@ -1,41 +1,143 @@
 #!/bin/bash
 
 show_menu() {
-    echo "╔═══════════════════════════════════════════════════════════════════════════════════════════╗"
-    echo "Welcome to DockLock! - A simple script to lock your macOS dock to prevent resizing" 
-    echo "1 - Turn Dock Lock On"
-    echo "2 - Turn Dock Lock Off"
-    echo "3 - Check Dock Lock Status"
+    echo "╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗"
+    echo "Welcome to DockLock! - A simple Terminal script to lock your macOS dock to prevent changes. You can lock the dock position, size, and contents." 
+    echo "1 - Lock Dock Position"
+    echo "2 - Lock Dock Size"
+    echo "3 - Lock Dock Contents"
     echo "4 - Clear Terminal"
     echo "0 - Exit"
-    echo "╚════════════════════════════════════════════════════════════════════════════════════════════╝"
+    echo "╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝"
 }
 
-turn_lock_on() {
-    defaults write com.apple.Dock size-immutable -bool true
-    killall Dock
-    echo "Dock is now locked."
+lock_dock_position() {
+    while true; do
+        echo "Lock Dock Position - Menu"
+        echo "1 - Turn On"
+        echo "2 - Turn Off"
+        echo "3 - Check Status"
+        echo "4 - Clear Terminal"
+        echo "0 - Go Back to Main Menu"
+        read -p "Enter your choice (1/2/3/4/0): " choice
+
+        case $choice in
+            1) 
+                defaults write com.apple.Dock position-immutable -bool true
+                killall Dock
+                echo "Dock position is now locked."
+                ;;
+            2) 
+                defaults write com.apple.Dock position-immutable -bool false
+                killall Dock
+                echo "Dock position lock has been turned off."
+                ;;
+            3) 
+                locked=$(defaults read com.apple.Dock position-immutable 2>/dev/null)
+                if [ "$locked" = "1" ]; then
+                    echo "Dock position is currently locked."
+                else
+                    echo "Dock position is currently not locked."
+                fi
+                ;;
+            4) 
+                clear
+                echo "Terminal cleared."
+                ;;
+            0) 
+                break
+                ;;
+            *)
+                echo "Invalid choice. Please enter 1, 2, 3, 4, or 0."
+                ;;
+        esac
+    done
 }
 
-turn_lock_off() {
-    defaults delete com.apple.Dock size-immutable
-    killall Dock
-    echo "Dock lock has been turned off."
+lock_dock_size() {
+    while true; do
+        echo "Lock Dock Size - Menu"
+        echo "1 - Turn On"
+        echo "2 - Turn Off"
+        echo "3 - Check Status"
+        echo "4 - Clear Terminal"
+        echo "0 - Go Back to Main Menu"
+        read -p "Enter your choice (1/2/3/4/0): " choice
+
+        case $choice in
+            1) 
+                defaults write com.apple.Dock size-immutable -bool true
+                killall Dock
+                echo "Dock size is now locked."
+                ;;
+            2) 
+                defaults write com.apple.Dock size-immutable -bool false
+                killall Dock
+                echo "Dock size lock has been turned off."
+                ;;
+            3) 
+                locked=$(defaults read com.apple.Dock size-immutable 2>/dev/null)
+                if [ "$locked" = "1" ]; then
+                    echo "Dock size is currently locked."
+                else
+                    echo "Dock size is currently not locked."
+                fi
+                ;;
+            4) 
+                clear
+                echo "Terminal cleared."
+                ;;
+            0) 
+                break
+                ;;
+            *)
+                echo "Invalid choice. Please enter 1, 2, 3, 4, or 0."
+                ;;
+        esac
+    done
 }
 
-check_lock_status() {
-    locked=$(defaults read com.apple.Dock size-immutable 2>/dev/null)
+lock_dock_contents() {
+    while true; do
+        echo "Lock Dock Contents - Menu"
+        echo "1 - Turn On"
+        echo "2 - Turn Off"
+        echo "3 - Check Status"
+        echo "4 - Clear Terminal"
+        echo "0 - Go Back to Main Menu"
+        read -p "Enter your choice (1/2/3/4/0): " choice
 
-    if [ "$locked" = "1" ]; then
-        echo "Dock is currently locked."
-    else
-        echo "Dock is currently not locked."
-    fi
-}
-
-clear_terminal() {
-    clear
-    echo "Terminal cleared."
+        case $choice in
+            1) 
+                defaults write com.apple.Dock contents-immutable -bool true
+                killall Dock
+                echo "Dock contents are now locked."
+                ;;
+            2) 
+                defaults write com.apple.Dock contents-immutable -bool false
+                killall Dock
+                echo "Dock contents lock has been turned off."
+                ;;
+            3) 
+                locked=$(defaults read com.apple.Dock contents-immutable 2>/dev/null)
+                if [ "$locked" = "1" ]; then
+                    echo "Dock contents are currently locked."
+                else
+                    echo "Dock contents are currently not locked."
+                fi
+                ;;
+            4) 
+                clear
+                echo "Terminal cleared."
+                ;;
+            0) 
+                break
+                ;;
+            *)
+                echo "Invalid choice. Please enter 1, 2, 3, 4, or 0."
+                ;;
+        esac
+    done
 }
 
 while true; do
@@ -43,10 +145,13 @@ while true; do
     read -p "Enter your choice (1/2/3/4/0): " choice
 
     case $choice in
-        1) turn_lock_on ;;
-        2) turn_lock_off ;;
-        3) check_lock_status ;;
-        4) clear_terminal ;;
+        1) lock_dock_position ;;
+        2) lock_dock_size ;;
+        3) lock_dock_contents ;;
+        4)
+            clear
+            echo "Terminal cleared."
+            ;;
         0)
             echo "Exiting DockLock. Goodbye!"
             break
