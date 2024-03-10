@@ -20,11 +20,12 @@ Bellow is a example how it runs.
 7. Done. Repeat steps 3, 4 and 6 if you want to open the Script again. 
 
 **Features:** <br>
-1 - Turn Dock Lock On: Locks the macOS Dock to prevent resizing. <br>
-2 - Turn Dock Lock Off: Unlocks the macOS Dock, allowing resizing. <br>
-3 - Check Dock Lock Status: Displays whether the Dock is currently locked or unlocked. <br>
-4 - Clear Terminal: Clears the terminal screen for better visibility. <br>
-0 - Exit: Exits the DockLock program. <br>
+Features:
+1 - Lock Dock Position: Prevent unintended changes to the dock's position, i.e. having the dock on the bottom, left, or right. <br>
+2 - Lock Dock Size: Set and maintain your preferred dock size. <br>
+3 - Lock Dock Contents: Secure your docks contents to prevent accidental changes, i.e. stops items from being re-arranged, removed, or added. <br>
+4 - Clear Terminal: Improve visibility by clearing the terminal screen. <br>
+0 - Exit: Safely exit the DockLock program. <br>
 
 **Coming Soon** <br>
 1. App based so there will be no need to open Terminal and locate the Script file. <br>
