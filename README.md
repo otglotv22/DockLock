@@ -20,7 +20,6 @@ Bellow is a example how it runs.
 7. Done. Repeat steps 3, 4 and 6 if you want to open the Script again. 
 
 **Features:** <br>
-Features:
 1 - Lock Dock Position: Prevent unintended changes to the dock's position, i.e. having the dock on the bottom, left, or right. <br>
 2 - Lock Dock Size: Set and maintain your preferred dock size. <br>
 3 - Lock Dock Contents: Secure your docks contents to prevent accidental changes, i.e. stops items from being re-arranged, removed, or added. <br>
