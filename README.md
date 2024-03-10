@@ -1,6 +1,8 @@
 # DockLock
 
-![Promo Image](https://otglot.weebly.com/uploads/4/4/8/2/44824789/promo_orig.png)
+![Promo Image](https://otglot.weebly.com/uploads/4/4/8/2/44824789/promo_orig.png) <br>
+
+![Promo Image](https://otglot.weebly.com/uploads/4/4/8/2/44824789/promo-2_orig.png)
 
 **About:** <br>
 DockLock is a simple to use Terminal script which lets you lock your macOS dock to prevent resizing. 
