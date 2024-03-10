@@ -25,3 +25,9 @@ Bellow is a example how it runs.
 3 - Check Dock Lock Status: Displays whether the Dock is currently locked or unlocked. <br>
 4 - Clear Terminal: Clears the terminal screen for better visibility. <br>
 0 - Exit: Exits the DockLock program. <br>
+
+**Coming Soon** <br>
+1. App based so there will be no need to open Terminal and locate the Script file. <br>
+2. Icon for app so it will be easy to locate and better looking on your computer. <br>
+3. Simple to follow video tutorial on how to use the programme. <br>
+4. Simple to follow text based instructions on how to use the programme. <br>
