@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# DockLock Programme by otglot. Please visit otglot.weebly.com for more. 
+
+# Function to display the main menu
+
 show_menu() {
     echo "╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗"
     echo "Welcome to DockLock! - A simple Terminal script to lock your macOS dock to prevent changes. You can lock the dock position, size, and contents." 
@@ -13,12 +17,14 @@ show_menu() {
 
 lock_dock_position() {
     while true; do
+        echo "╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         echo "Lock Dock Position - Menu"
         echo "1 - Turn On"
         echo "2 - Turn Off"
         echo "3 - Check Status"
         echo "4 - Clear Terminal"
         echo "0 - Go Back to Main Menu"
+        echo "╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         read -p "Enter your choice (1/2/3/4/0): " choice
 
         case $choice in
@@ -56,12 +62,14 @@ lock_dock_position() {
 
 lock_dock_size() {
     while true; do
+        echo "╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         echo "Lock Dock Size - Menu"
         echo "1 - Turn On"
         echo "2 - Turn Off"
         echo "3 - Check Status"
         echo "4 - Clear Terminal"
         echo "0 - Go Back to Main Menu"
+        echo "╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         read -p "Enter your choice (1/2/3/4/0): " choice
 
         case $choice in
@@ -99,12 +107,14 @@ lock_dock_size() {
 
 lock_dock_contents() {
     while true; do
+        echo "╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         echo "Lock Dock Contents - Menu"
         echo "1 - Turn On"
         echo "2 - Turn Off"
         echo "3 - Check Status"
         echo "4 - Clear Terminal"
         echo "0 - Go Back to Main Menu"
+        echo "╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         read -p "Enter your choice (1/2/3/4/0): " choice
 
         case $choice in
